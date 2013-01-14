@@ -1,0 +1,8 @@
+/* Simple Focus is a UX + brand firm in Memphis helping local and national brands take on the internet with simple ideas, design and technology. */
+/* simplefocus.com */
+/* humanstxt.org */
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: jQuery
+  Software: Coda, Sublime Text, Git
