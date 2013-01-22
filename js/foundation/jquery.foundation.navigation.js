@@ -51,5 +51,5 @@
     }
 
   };
-
-})( jQuery, this );
+  
+})( jQuery, this );$
