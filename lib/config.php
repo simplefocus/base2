@@ -27,6 +27,8 @@ function roots_display_sidebar() {
      * array('function_name', array('arg1', 'arg2'))
      *
      * The second element must be an array even if there's only 1 argument.
+     *
+     * List the function name of pages that should NOT have a sidebar
      */
     array(
       'is_404',
@@ -35,6 +37,8 @@ function roots_display_sidebar() {
     /**
      * Page template checks (via is_page_template())
      * Any of these page templates that return true won't show the sidebar
+     *
+     * List the templates of pages that should NOT have a sidebar
      */
     array(
       'page-custom.php'
