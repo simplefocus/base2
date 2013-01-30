@@ -8,6 +8,7 @@ add_theme_support('root-relative-urls');    // Enable relative URLs
 add_theme_support('rewrite-urls');          // Enable URL rewrites
 add_theme_support('h5bp-htaccess');         // Enable HTML5 Boilerplate's .htaccess
 add_theme_support('top-bar');                // Enable Foundation's fixed navbar
+// add_theme_support('nav-bar');         // Enable HTML5 Boilerplate's .htaccess
 
 
 /**
@@ -26,6 +27,8 @@ function roots_display_sidebar() {
      * array('function_name', array('arg1', 'arg2'))
      *
      * The second element must be an array even if there's only 1 argument.
+     *
+     * List the function name of pages that should NOT have a sidebar
      */
     array(
       'is_404',
@@ -34,6 +37,8 @@ function roots_display_sidebar() {
     /**
      * Page template checks (via is_page_template())
      * Any of these page templates that return true won't show the sidebar
+     *
+     * List the templates of pages that should NOT have a sidebar
      */
     array(
       'page-custom.php'

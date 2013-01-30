@@ -54,8 +54,7 @@ if (current_theme_supports('top-bar')) {
       parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
     }
   }
-} else {
-
+} elseif (current_theme_supports('nav-bar')) {
   class Roots_Nav_Walker extends Walker_Nav_Menu {
     function check_current($classes) {
       return preg_match('/(current[-_])|active|dropdown/', $classes);
