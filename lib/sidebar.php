@@ -13,17 +13,20 @@
 class Roots_Sidebar {
   private $conditionals;
   private $templates;
+  private $post_types;
 
   public $display = true;
 
-  function __construct($conditionals = array(), $templates = array()) {
+  function __construct($conditionals = array(), $templates = array(), $post_types = array()) {
     $this->conditionals = $conditionals;
     $this->templates    = $templates;
+    $this->post_types   = $post_types;
 
     $conditionals = array_map(array($this, 'check_conditional_tag'), $this->conditionals);
     $templates    = array_map(array($this, 'check_page_template'), $this->templates);
+    $post_types   = array_map(array($this, 'check_post_type'), $this->post_types);
 
-    if (in_array(true, $conditionals) || in_array(true, $templates)) {
+    if (in_array(true, $conditionals) || in_array(true, $templates) || in_array(true, $post_types)) {
       $this->display = false;
     }
   }
@@ -38,6 +41,10 @@ class Roots_Sidebar {
 
   private function check_page_template($page_template) {
     return is_page_template($page_template);
+  }
+
+  private function check_post_type($post_type) {
+    return $post_type == get_post_type();
   }
 }
 ?>

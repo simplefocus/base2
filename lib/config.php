@@ -37,7 +37,14 @@ function roots_display_sidebar() {
      */
     array(
       'page-custom.php'
-    )
+    )//, // uncomment comma to use post type conditions
+    /**
+     * Post type checks (via get_post_type())
+     * Any of these page templates that return true won't show the sidebar
+     */ 
+    // array(
+    //   'post'
+    //   )
   );
 
   return $sidebar_config->display;
